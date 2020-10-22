@@ -1,0 +1,73 @@
+.nav-bar{
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: slateblue;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+
+#site-logo{
+    background-image: linear-gradient(0.25turn,red,yellow,blue,purple,violet);
+    background-image: linear-gradient(0.25turn,rgb(47, 174, 216), white, rgb(47, 174, 216), white,rgb(47, 174, 216));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight:bolder;
+    font-size:32px;
+    margin-left:24px;
+    cursor:pointer;
+}
+
+.nav-bar ul{
+    width: 240px;
+
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 2vw;
+}
+
+.nav-bar input{
+    width: 40vw;
+    height: 30px;
+    border-radius: 4px;
+    padding-left: 8px;
+    font-family:inherit;
+    letter-spacing:1px;
+    font-size:inherit;
+    font-weight:500;
+}
+
+input:focus{
+    outline:none;
+}
+.nav-logo{
+    width: 10vw;
+    padding-left: 2vw;
+    cursor: pointer;
+}
+.nav-bar ul li button{
+    width: 80px;
+    height: 32px;
+    cursor: pointer;
+    background-color: inherit;
+    color:whitesmoke;
+    border:solid 1px whitesmoke;
+    margin: 2px;
+    letter-spacing: 1px;
+    font-weight:bold;
+}
+
+.nav-bar ul li button:hover{
+    opacity: 80%;
+}
+
+#signup-button{
+    color: slateblue;
+    background-color: whitesmoke;
+}

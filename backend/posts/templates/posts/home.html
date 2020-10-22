@@ -5,7 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'posts/home.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/containers.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/nav-bar.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/global.css'%}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Today, On The Internet...</title>
@@ -31,22 +33,24 @@
     <div class="posts-container">
     <h2>Popular Posts</h2>
     {% for post in posts %}
-        <div class="individual-post">
-            <h3> {{post.title}} <em>posted by <a>{{post.user}}</a> <a>{{post.age}}</a></em></h3>
-            <div class="individual-post-content">
-                {% if post.content_is_text %}
-                    <p> {{post.text}}</p>
-                {% else %}
-                    <p> {{post.content}} </p>
-                {% endif %}
-            </div>
-            <div class="like-comment-share"> 
-                <ul>
-                    <li class="individual-post-likes-count"> {{post.likes}} likes  </li>
-                    <li> <button class="like-button"> like </button> </li>
-                    <li> <a>comment</a> </li>
-                    <li> <button class="share-button">share</button></li>
-                </ul> 
+        <div class="content-container">
+            <div class="content-frame">
+                <h3> {{post.title}} <em>posted by <a>{{post.user}}</a> <a>{{post.age}}</a></em></h3>
+                <div class="content-preview">
+                    {% if post.content_is_text %}
+                        <p> {{post.text}}</p>
+                    {% else %}
+                        <p> {{post.content}} </p>
+                    {% endif %}
+                </div>
+                <div class="like-comment-share"> 
+                    <ul>
+                        <li class="likes-count"> {{post.likes}} likes  </li>
+                        <li> <button class="like-button"> like </button> </li>
+                        <li> <a>comment</a> </li>
+                        <li> <button class="share-button">share</button></li>
+                    </ul> 
+                </div>
             </div>
         </div>
     {% endfor %}
@@ -55,14 +59,3 @@
     </div>
 </body>
 </html>
-
-<!--
-    Posts have 
-    title
-    preview
-    likes
-    user
-    time since post
-
-
--->

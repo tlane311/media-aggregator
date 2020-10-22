@@ -66,7 +66,7 @@ single_post = {
 
 def home(request):
     context = {
-        'posts': posts
+        'posts': posts+posts+posts
     }
     return render(request, 'posts/home.html', context)
 
