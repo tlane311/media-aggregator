@@ -1,0 +1,134 @@
+/* Global CSS properties */
+h3 em{
+    font-size: 12px;
+    opacity:75%;
+}
+
+a{
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.styled-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding:4px 16px 4px 16px;
+    border-radius: 20px;
+    width: 60vw;
+    min-width: 600px;
+    max-width: 800px;
+}
+.styled-container h2{
+    align-self: flex-start;
+    letter-spacing: 2px;
+}
+
+.content-container{
+    width: 60vw;
+    min-width: 600px;
+    max-width: 800px;
+    display:flex;
+    flex-direction:column;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 8px;
+    margin-top:8px;
+    color: rgb(7, 14, 37);
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.content-preview{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    word-break: break-all;
+}
+
+
+.comments-container{
+    width: 60vw;
+    min-width: 600px;
+    max-width: 800px;
+    display:flex;
+    flex-direction:column;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 8px;
+    margin-top:8px;
+    color: rgb(7, 14, 37);
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.clickable-content:hover{
+    border: solid 1px;
+}
+
+
+.like-comment-share{
+    background-color: slateblue;
+    color:whitesmoke;
+    padding: 2px;
+    width:100%;
+}
+
+    .likes-count{
+        margin-right:auto;
+    }
+
+
+
+    .like-comment-share ul{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+        .like-comment-share li{
+            padding-left: 4px;
+            padding-right:4px;
+        }
+
+        .like-comment-share button{
+            background-color: inherit;
+            border-radius: 2px;
+            color: inherit;
+            font-size: inherit;
+            font-family: inherit;
+            padding-left: 2px;
+            padding-right: 2px;
+            border:none;
+            letter-spacing:none;
+        }
+        .like-comment-share button:hover{
+            color: slateblue;
+            background-color: whitesmoke;
+        }
+        .like-comment-share a:hover{
+            color: slateblue;
+            background-color: whitesmoke;
+            text-decoration: none;
+        }
+
+
+
+
+
+#show-more-content button{
+    font-family:inherit;
+    font-size:20px;
+    border:none;
+    background-color:inherit;
+    color:inherit;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
