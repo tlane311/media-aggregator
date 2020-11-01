@@ -47,17 +47,17 @@ single_post = {
     'likes': '2 million',
     'comments': [
         {
-            'user': 'name',
+            'user': 'angry_user',
             'likes': 123,
             'content': 'asdagkjhasd;fjhasdfkja'
         },
         {
-            'user': 'name',
+            'user': 'furious_user',
             'likes': 123,
             'content': 'asdagkjhasd;fjhasdfkja'
         },
         {
-            'user': 'name',
+            'user': 'belligerent_user',
             'likes': 123,
             'content': 'asdagkjhasd;fjhasdfkja'
         }
@@ -72,7 +72,11 @@ def home(request):
 
 
 def individual_community(request, community_id):
-    return HttpResponse("community: " + community_id)
+    context = {
+        'community_name': "my first community",
+        'posts': posts+posts+posts
+    }
+    return render(request, 'posts/individual_community.html', context)
 
 def individual_post(request,community_id, post_id):
     context ={
@@ -84,7 +88,83 @@ def user(request, user_id):
     return HttpResponse("User: "+user_id)
 
 def communities(request):
-    return HttpResponse("communities homepage")
+    context ={
+        "communities":[
+            {
+                'title': 'tech',
+                'age': '6 years ago',
+                'description': 'a community for those who like tech',
+                'users': '6k'
+            },
+            {
+                'title': 'CuteAnimals',
+                'age': '600 years ago',
+                'description': 'only the cutest animals',
+                'users': '600k'
+            },
+            {
+                'title': 'WhatShouldIWatchNext',
+                'age': '10 months ago',
+                'description': 'come here for tv/movie recommendations',
+                'users': '36k'
+            },
+            {
+                'title': 'tech',
+                'age': '6 years ago',
+                'description': 'a community for those who like tech',
+                'users': '6k'
+            },
+            {
+                'title': 'CuteAnimals',
+                'age': '600 years ago',
+                'description': 'only the cutest animals',
+                'users': '600k'
+            },
+            {
+                'title': 'WhatShouldIWatchNext',
+                'age': '10 months ago',
+                'description': 'come here for tv/movie recommendations',
+                'users': '36k'
+            },
+            {
+                'title': 'tech',
+                'age': '6 years ago',
+                'description': 'a community for those who like tech',
+                'users': '6k'
+            },
+            {
+                'title': 'CuteAnimals',
+                'age': '600 years ago',
+                'description': 'only the cutest animals',
+                'users': '600k'
+            },
+            {
+                'title': 'WhatShouldIWatchNext',
+                'age': '10 months ago',
+                'description': 'come here for tv/movie recommendations',
+                'users': '36k'
+            },
+            {
+                'title': 'tech',
+                'age': '6 years ago',
+                'description': 'a community for those who like tech',
+                'users': '6k'
+            },
+            {
+                'title': 'CuteAnimals',
+                'age': '600 years ago',
+                'description': 'only the cutest animals',
+                'users': '600k'
+            },
+            {
+                'title': 'WhatShouldIWatchNext',
+                'age': '10 months ago',
+                'description': 'come here for tv/movie recommendations',
+                'users': '36k'
+            },
+        ]
+    }
+    return render(request, 'posts/communities.html', context)
 
 def community(request):
     return redirect('communities')

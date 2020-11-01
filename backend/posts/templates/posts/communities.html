@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/containers.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/nav-bar.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/global.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Today, On The Internet...</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a id="site-logo"> LOGO </a>
+        <form method="POST">
+            <input type="text" name="search-bar" id="search-bar" placeholder="Search"/>
+        </form>
+
+        <ul>
+            <li> <button id="login-button"> LOG IN </button> </li>
+            <li> <button id="signup-button"> SIGN UP </button> </li>
+            <li> 
+                <button>Options</button>
+            </li>
+        </ul>
+
+    </nav>
+    
+    
+    <div class="posts-container">
+    <h2>Communities</h2>
+    {% for community in communities %}
+        <div class="content-container clickable-content">
+            <div class="content-frame">
+                <h3> {{community.title}} <em>created <a>{{community.age}}</a></em></h3>
+                <div class="content-preview">
+                    <p>{{community.description}}</p>
+                </div>
+                <div class="like-comment-share"> 
+                    <ul>
+                        <li class="likes-count"> {{community.users}} users  </li>
+                        <li> <button> join </button> </li>
+                        <li> <button>view</button></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+        <div id="show-more-content"> <button>See more posts</button> </div>
+    </div>
+</body>
+</html>

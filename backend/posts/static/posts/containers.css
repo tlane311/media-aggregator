@@ -60,6 +60,37 @@ a:hover{
     border: solid 1px;
 }
 
+.write-comment-container{
+    padding-top:16px;
+    padding-bottom:16px;
+    display:flex;
+    flex-direction:column;
+    height: 120px;
+    width:100%;
+    align-items:center;
+}
+.write-comment-container form{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+    width:100%;
+    height:100%;
+}
+#comment-area{
+    width:90%;
+    height: 80px;
+}
+
+
+.dividing-div{
+    background-color: slategrey;
+    width: 100%;
+    height:2px;
+    margin-top:16px;
+    margin-bottom:16px;
+}
+
 
 .like-comment-share{
     background-color: slateblue;
@@ -104,9 +135,6 @@ a:hover{
             background-color: whitesmoke;
             text-decoration: none;
         }
-
-
-
 
 
 #show-more-content button{
